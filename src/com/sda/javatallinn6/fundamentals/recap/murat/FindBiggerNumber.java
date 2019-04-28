@@ -17,5 +17,6 @@ public class FindBiggerNumber {
         } else {
             System.out.print(second + " is bigger than " + first+".");
         }
+        scan.close();
     }
 }
