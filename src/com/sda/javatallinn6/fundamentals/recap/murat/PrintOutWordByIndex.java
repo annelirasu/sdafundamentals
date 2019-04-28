@@ -9,13 +9,15 @@ public class PrintOutWordByIndex {
         String sentence = scanner.nextLine();
         if (sentence.equalsIgnoreCase("done")) System.exit(0);
 
-        System.out.println("Pease enter an order number of a word in sentence: ");
+        System.out.println("Please enter an order number of a word in sentence: ");
         int indexOfWord = scanner.nextInt() - 1;
         while (true) {
 
             String[] words = sentence.split("\\s+");
             if (indexOfWord > words.length - 1) {
                 System.out.println("Sentences doesn't have so much words");
+            }else if(indexOfWord<0){
+                System.out.println("Sorry we don't accept neither 0 nor negative numbers.");
             }
      else {
                 System.out.println(words[indexOfWord]);
